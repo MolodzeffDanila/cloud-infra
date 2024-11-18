@@ -9,3 +9,5 @@ services:
   cloud-front:
     image: fonmolodtsev/cloud-front:latest
     restart: always
+    ports:
+      - 3000:3000
