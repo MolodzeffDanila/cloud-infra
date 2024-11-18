@@ -13,8 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Clear containers
-      run: docker rm -f $(docker ps -aq)
+      run: docker ps -aq | xargs -r docker rm -f
     - name: Clear images
-      run: docker rmi -f $(docker images -aq)
+      run: docker images -aq | xargs -r docker rmi -f
     - name: Run Docker Compose
       run: docker compose up -d
