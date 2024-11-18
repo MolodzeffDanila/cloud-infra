@@ -9,4 +9,3 @@ services:
   cloud-front:
     image: fonmolodtsev/cloud-front:latest
     restart: always
-    command: ls && pwd
