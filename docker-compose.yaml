@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  cloud-back:
+    image: fonmolodtsev/cloud-back:latest
+    restart: always
+    ports:
+      - 8080:8080
+  cloud-front:
+    image: fonmolodtsev/cloud-front:latest
+    restart: always
