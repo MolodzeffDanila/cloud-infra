@@ -1,8 +1,7 @@
 name: Docker Compose
-
 on:
-  workflow_dispatch:
-
+  repository_dispatch:
+    types: [redeploy-on-vps]
 jobs:
   build:
     runs-on: self-hosted
